@@ -120,8 +120,8 @@
         
                             map.addControl(new maplibregl.NavigationControl(), "top-left");
                             
-                            var url_device_pos = url_device_base + '/Gas_Detector_Get_Location'; 
-                            var url_device_trail = url_device_base + '/Gas_Detector_Get_Location_History'; 
+                            var url_device_pos = url_device_base + '/Get_Device_Location'; 
+                            var url_device_trail = url_device_base + '/Get_Device_Location_History'; 
                             var url_device_trail_params = "duration=1200"; // How long trails should be in seconds since recorded
                             url_device_trail = url_device_trail+"?"+url_device_trail_params;
                             

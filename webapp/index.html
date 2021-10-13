@@ -11,36 +11,39 @@
             }
 
             #map {
-                height: calc(100vh - 87px);
+                height: calc(100vh - 150px);
                 width: 100%;
             }
         </style>
     </head>
   
-    <body>
-        <table width="100%" height="100%" position = "absolute" border = "0" cellspacing="0" cellpadding="0">
+    <body style="font-family:arial;">
+        <table width="100%" height="100%" position = "absolute" border = "0" cellspacing="2" cellpadding="2">
             <tr height = 25>
-                <td colspan = "2" bgcolor = "IndianRed">
+                <td style="background-color:darkred; color:white;" colspan = "2">
                     <center>
                         <h1>Personnel Hazard Tracking</h1>
                     </center>
                 </td>
             </tr>
             <tr valign = "top">
-                <td bgcolor = "Silver" width = "25%">
+                <td style="background-color:Silver; color:black;" width = "25%">
                     <b>Input Parameters</b><br><br>
                     <form id="form" onsubmit="return false;">
                         Enter API Gateway URL:<br>
-                        <input style="width:100%;" type="text" id="ApiInput" /><br>
-                        Enter Congito User Pool ID:<br>
-                        <input style="width:100%;" type="text" id="CognitoInput" /><br>
+                        <input style="width:100%;" type="text" value="https://1234567890.execute-api.us-east-1.amazonaws.com" id="ApiInput" /><br>
                         <br>
-                        <input style="width:100%;" type="submit" onclick="enterParams();" />
+                        Enter Congito User Pool ID:<br>
+                        <input style="width:100%;" type="text" value="us-east-1:12345678-1234-1234-1234-1234567890" id="CognitoInput" /><br>
+                        <br>
+                        <input style="width:100%;" type="submit" value="Start Map" onclick="enterParams();" /><br>
+                        <br>
+                        Note: Please refresh page if submitted incorrectly.<br>
                     </form>
                     
                 </td>
             
-                <td bgcolor = "Silver" width = "75%">
+                <td style="background-color:white;" width = "75%">
                     <div id="map" />
                     <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
                     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.784.0.min.js"></script>
@@ -59,7 +62,7 @@
                             // extract the region from the Identity Pool ID
                             AWS.config.region = identityPoolId.split(":")[0];
                             // alert(url_device_base + ' !!! ' + identityPoolId);
-                            alert('Parameters Updated!');
+                            //alert('Parameters Updated!');
                             getCredentials();
                             initializeMap();
                         }

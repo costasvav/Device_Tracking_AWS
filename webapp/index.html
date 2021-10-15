@@ -28,26 +28,29 @@
             </tr>
             <tr valign = "top">
                 <td style="background-color:Silver; color:black;" width = "25%">
-                    <b>Input Parameters</b><br><br>
+                    <b>Input Parameters</b><br>
+                    <br>
+                    Please copy and paste the API Endpoint URL and Congito User Pool ID into the fields below.  They are in the outputs of the CloudFormation.<br>
+                    <br>
                     <form id="form" onsubmit="return false;">
-                        Enter API Gateway URL:<br>
+                        API Endpoint URL:<br>
                         <input style="width:100%;" type="text" placeholder="https://1234567890.execute-api.us-east-1.amazonaws.com" id="ApiInput" /><br>
                         <br>
-                        Enter Congito User Pool ID:<br>
+                        Congito User Pool ID:<br>
                         <input style="width:100%;" type="text" placeholder="us-east-1:12345678-1234-1234-1234-1234567890" id="CognitoInput" /><br>
                         <br>
                         <input style="width:100%;" type="submit" value="Start Map" onclick="enterParams();" /><br>
                         <br>
                         Note: Please refresh page if submitted incorrectly.<br>
-                        <br><br><br>
-                        Useful Links:<br>
-                        <br>
-                        <a href="https://console.aws.amazon.com/events/home?region=us-east-1#/rules">EventBridge Rules Link</a><br>
-                        <a href="https://console.aws.amazon.com/iot/home?region=us-east-1#/test">IoT MQTT Test Client</a><br>
-                        <a href="https://console.aws.amazon.com/iotevents/home?region=us-east-1#/detectormodel">IoT Events Detector Models</a><br>
-                        <a href="https://console.aws.amazon.com/amplify/home?region=us-east-1#/">Amplify Console</a><br>
-                        <br>
                     </form>
+                    <br><br><br>
+                    <b>Useful Links:</b><br>
+                    <br>
+                    <a href="https://console.aws.amazon.com/events/home?region=us-east-1#/rules">EventBridge Rules Link</a><br>
+                    <a href="https://console.aws.amazon.com/iot/home?region=us-east-1#/test">IoT MQTT Test Client</a><br>
+                    <a href="https://console.aws.amazon.com/iotevents/home?region=us-east-1#/detectormodel">IoT Events Detector Models</a><br>
+                    <a href="https://console.aws.amazon.com/amplify/home?region=us-east-1#/">Amplify Console</a><br>
+                    <br>
                     
                 </td>
             
